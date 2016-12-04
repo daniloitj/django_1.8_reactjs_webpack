@@ -1,0 +1,15 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+  </head>
+
+  <body>
+    <div id="react-app"></div>
+<!-- <script src="static/bundles/main-236644b8b02a280ccff8.js"></script>     -->
+
+    {% render_bundle 'main' %}
+  </body>
+</html>

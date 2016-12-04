@@ -1,0 +1,38 @@
+{
+  "name": "django_1.8_reactjs_webpack",
+  "version": "1.0.0",
+  "description": "integrando django 1.8 reactjs e webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniloitj/django_1.8_reactjs_webpack.git"
+  },
+  "keywords": [
+    "django"
+  ],
+  "author": "danilo silva dos santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniloitj/django_1.8_reactjs_webpack/issues"
+  },
+  "homepage": "https://github.com/daniloitj/django_1.8_reactjs_webpack#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "jsx-loader": "^0.13.2",
+    "react": "^15.4.1",
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^1.13.3",
+    "webpack-bundle-tracker": "^0.1.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
