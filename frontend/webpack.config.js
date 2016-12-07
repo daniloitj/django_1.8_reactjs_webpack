@@ -6,6 +6,7 @@ module.exports = {
   context: __dirname,
 	// entry: './assets/js/entry.jsx', //opcao sem reload
   entry: [
+      'babel-polyfill',    
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
       './assets/js/entry.jsx'
@@ -37,17 +38,27 @@ module.exports = {
     //     }
     // }]
 
-    loaders: [{
+    loaders: [
+      {
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loaders: ['react-hot', 'babel?presets[]=es2015,presets[]=react']
-    }]
+      loaders: ['react-hot', 'babel?presets[]=es2015,presets[]=react,presets[]=stage-0',]
+      }
+      ,
+      // { test: /\.css$/, loader: "style-loader!css-loader?assets=." },
+      // { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'url?limit=10000!img?progressive=true' },
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+     { test: /\.png$/, loader: "url-loader?limit=100000" },
+     { test: /\.jpg$/, loader: "file-loader" }
+  ]
+
 	},
   resolve: {
     modulesDirectories: ['node_modules', 'bower_components'],
     extensions: ['', '.js', '.jsx']
-  },
-  scripts: {
-    start: "webpack-dev-server",
   }
+  // ,
+  // scripts: {
+  //   start: "webpack-dev-server",
+  // }
 };
